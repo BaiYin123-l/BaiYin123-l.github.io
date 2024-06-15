@@ -1,13 +1,49 @@
+<!doctype html>
 <html>
-<header>
-    <title>selfbook</title>
-</header>
+<head>
+<meta charset="utf-8">
+<title>白影的书架</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		.father{
+			width: 1024px;
+			height: auto;
+			margin: 0 auto;
+		}
+		.father>div>h2{
+			text-align: center;
+		}
+		.father>div{
+			float: left;
+			background-color: yellow;
+			margin-right: 90px;
+		}
+		.rightbigbox{
+			width: 600px;
+		}
+	</style>
+</head>
+
 <body>
-    <h1>maker:baiyin</h1>
-    <div>
-        <img>
-        <img>
-        <img>
-    </div>
+	<header>
+	</header>
+	<div class="father">
+		<div class="leftbigbox">
+			<h2>小说书架跳转</h2>
+		</div>
+		<div class="moddilebigbox">
+			<h2>学习编辑</h2>
+		</div>
+		<div class="rightbigbox">
+			<h2>直播观看</h2>
+			<iframe style="width: 600px;height: 400px;" src="https://www.bilibili.com/blackboard/live/live-activity-player.html?cid=27716684&quality=0" frameborder="no"    framespacing="0" scrolling="no" allow="autoplay; encrypted-media" allowfullscreen="true">
+			</iframe>
+		</div>
+	</div>
+	<footer>
+	</footer>
 </body>
 </html>
