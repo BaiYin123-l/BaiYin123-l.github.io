@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>提交直播间网址</title>
+</head>
+<body>
+  <h1>提交直播间网址</h1>
+  <form id="live-url-form">
+    <label for="live-url">请输入哔哩哔哩直播间的URL：</label><br>
+    <input type="text" id="live-url" name="live-url" size="50" required><br><br>
+    <button type="submit">提交</button>
+  </form>
+
+  <script>
+    document.getElementById('live-url-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // 阻止表单提交刷新页面
+
+      const liveUrl = document.getElementById('live-url').value.trim();
+
+      // 在这里进行URL解析和处理
+      const url = new URL(liveUrl);
+      const roomId = url.pathname.split('/')[1]; // 获取直播间编号
+
+      // 创建列表项并插入到动态网页中
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.textContent = `用户提交的直播间 - ${roomId}`;
+      link.href = liveUrl;
+      link.target = "_blank"; // 在新标签页打开链接
+      listItem.appendChild(link);
+
+      // 添加到现有列表中
+      const liveStreams = document.getElementById('live-streams');
+      liveStreams.appendChild(listItem);
+
+      // 可以根据需要进行其他处理，比如清空输入框或显示提交成功信息
+      document.getElementById('live-url').value = '';
+      alert('提交成功！');
+    });
+  </script>
+</body>
+</html>
