@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目群</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+</head>
+<body>
+    <div id="bg">
+    <header>
+        <h1>白影的个人博客</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">主页</a></li>
+            <li><a href="/projects/">项目群</a></li>
+            <li><a href="/about/">关于网站</a></li>
+        </ul>
+    </nav>
+    <main>
+        
+    <h2>我的项目</h2>
+    <div class="sql-container">
+        <div class="file-tabs">
+            
+            <div class="file-tab" onclick="fetchData('test', '')">
+                test
+            </div>
+            
+        </div>
+        <div class="table-tabs">
+            
+                
+                <div class="table-tab" onclick="fetchData('test', 'test')">
+                    test
+                </div>
+                
+            
+        </div>
+        <div id="result" class="query-result">
+            <!-- Query results will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        function fetchData(file, table) {
+            fetch(`/query?file=${encodeURIComponent(file)}&table=${encodeURIComponent(table)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const resultDiv = document.getElementById('result');
+                    resultDiv.innerHTML = ''; // Clear previous results
+                    const tableElement = document.createElement('table');
+                    tableElement.classList.add('result-table');
+
+                    const thead = document.createElement('thead');
+                    const headerRow = document.createElement('tr');
+                    Object.keys(data[0]).forEach(key => {
+                        const th = document.createElement('th');
+                        th.textContent = key;
+                        headerRow.appendChild(th);
+                    });
+                    thead.appendChild(headerRow);
+                    tableElement.appendChild(thead);
+
+                    const tbody = document.createElement('tbody');
+                    data.forEach(rowData => {
+                        const row = document.createElement('tr');
+                        Object.values(rowData).forEach(value => {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            row.appendChild(td);
+                        });
+                        tbody.appendChild(row);
+                    });
+                    tableElement.appendChild(tbody);
+
+                    resultDiv.appendChild(tableElement);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        function autoRefresh() {
+            setInterval(() => {
+                const selectedFile = document.querySelector('.file-tab.selected').innerText.trim();
+                const selectedTable = document.querySelector('.table-tab.selected').innerText.trim();
+                fetchData(selectedFile, selectedTable);
+            }, 3000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            autoRefresh();
+        });
+    </script>
+
+    </main>
+    <footer>
+        <p>转载声明：本博客内容仅供学习参考，未经允许请勿转载。</p>
+    </footer>
+    </div>
+</body>
+</html>

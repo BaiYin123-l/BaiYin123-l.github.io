@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    width: 1024px;
+    margin: 0 auto;
+    /*background-color: antiquewhite;*/
+}
+
+p{
+    text-indent: 2em;
+}
+
+#bg{
+    width: 100%;
+    background-color: rgba(253, 232, 204, 0.81);
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    background: #7a5d5d;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    /*position: fixed;
+    bottom: 0;*/
+    width: 100%;
+}
+.article-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.article {
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.article .modified-time {
+    color: #666;
+    font-size: 14px;
+}
+
+.article .content {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.sql-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.file-tabs, .table-tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.file-tab, .table-tab {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.file-tab.selected, .table-tab.selected {
+    background-color: #f0f0f0;
+}
+
+.query-result {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.result-table th, .result-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
