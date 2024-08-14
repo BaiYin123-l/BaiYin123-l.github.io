@@ -1,12 +1,11 @@
 # 项目名称
 
-该站点由白影（Baiyin）制作，采用HTML、CSS和JavaScript等技术，并链接至Supabase第三方数据库平台。该站点主要用于个人发牢骚和个人程序的开发。
+该站点由白影（Baiyin）制作，采用HTML、CSS和JavaScript等技术。该站点主要用于个人发牢骚和个人程序的开发。
 
 ## 技术栈
 - HTML
 - CSS
 - JavaScript
-- Supabase
 
 ## 功能
 - 个人发牢骚
@@ -33,13 +32,12 @@ MIT License
 
 # Project Name
 
-This site is created by Baiyin and utilizes technologies such as HTML, CSS, and JavaScript. It connects to the Supabase third-party database platform. The site serves primarily for personal rants and for developing personal programs.
+This site is created by Baiyin and utilizes technologies such as HTML, CSS, and JavaScript. The site serves primarily for personal rants and for developing personal programs.
 
 ## Tech Stack
 - HTML
 - CSS
 - JavaScript
-- Supabase
 
 ## Features
 - Personal rants

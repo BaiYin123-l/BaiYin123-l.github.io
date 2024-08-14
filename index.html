@@ -6,16 +6,130 @@
     <title>页面标题</title>
     <link rel="stylesheet" href="styles.css"> <!-- 引入 CSS 文件 -->
     <link rel="icon" href="ico.ico" type="image/x-icon">
+    <script>
+        // 使用 JavaScript 达到类似换页的效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('header ul li a');
+            const sections = document.querySelectorAll('main > section');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // 阻止默认链接行为
+                    const targetId = this.getAttribute('href').substring(1); // 获取 href 属性去掉 #
+                    
+                    sections.forEach(section => {
+                        section.style.display = 'none'; // 隐藏所有节
+                    });
+
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block'; // 显示目标节
+                    }
+                });
+            });
+
+            // 初始化时只显示首页
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById('home').style.display = 'block'; // 默认显示首页
+        });
+    </script>
 </head>
 <body>
     <header>
         <h1>欢迎来到白影(baiyin)的个人站点</h1>
+        <ul>
+            <li><a href="#home">首页</a></li> <!-- home -->
+            <li><a href="#text">吐槽杂谈</a></li> <!-- text -->
+            <li><a href="#projects">项目</a></li> <!-- projects -->
+            <li><a href="#report">说明</a></li> <!-- report -->
+        </ul>
     </header>
 
     <main>
-        <section>
-            <h2>部分标题</h2>
-            <p>这是一个段落，您可以在这里写一些文本。</p>
+        <section id="home" class="clearfix">
+            <img src="ico.ico" alt="baiyin logo!">
+            <div>
+                <p>my logo</p>
+                <h2>self think</h2>
+            </div>
+        </section>
+        <section id="text" class="clearfix">
+            <div class="talking">
+                <h2>测试</h2>
+                <p>测试</p>
+            </div>
+        </section>
+        <section id="projects" class="clearfix">
+            <h2>项目目录</h2>
+            <ul>
+                <li><a href="#">Leisurely Immortal Cultivation</a></li>
+                <li><a href="#">Airplane Battle</a></li>
+            </ul>
+            <p>暂时闲置</p>
+        </section>
+        <section id="report" class="clearfix">
+            <p>该站点由白影（Baiyin）制作，采用HTML、CSS和JavaScript等技术，并链接至Supabase第三方数据库平台。该站点主要用于个人发牢骚和个人程序的开发。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Supabase</li>
+            </ul>
+
+            <h2>功能</h2>
+            <ul>
+                <li>个人发牢骚</li>
+                <li>个人程序开发</li>
+            </ul>
+
+            <h2>安装与使用</h2>
+            <ol>
+                <li>克隆仓库：
+                    <pre><code>git clone https://github.com/BaiYin123-l/BaiYin123-l.github.io.git</code></pre>
+                </li>
+                <li>进入项目目录：
+                    <pre><code>cd BaiYin123-l.github.io</code></pre>
+                </li>
+                <li>打开 <code>index.html</code> 文件以查看效果。</li>
+            </ol>
+
+            <h2>许可证</h2>
+            <p>MIT License</p>
+
+            <hr>
+            <p>This site is created by Baiyin and utilizes technologies such as HTML, CSS, and JavaScript. It connects to the Supabase third-party database platform. The site serves primarily for personal rants and for developing personal programs.</p>
+
+            <h2>Tech Stack</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Supabase</li>
+            </ul>
+
+            <h2>Features</h2>
+            <ul>
+                <li>Personal rants</li>
+                <li>Personal program development</li>
+            </ul>
+
+            <h2>Installation and Usage</h2>
+            <ol>
+                <li>Clone the repository:
+                    <pre><code>git clone https://github.com/BaiYin123-l/BaiYin123-l.github.io.git</code></pre>
+                </li>
+                <li>Navigate to the project directory:
+                    <pre><code>cd BaiYin123-l.github.io</code></pre>
+                </li>
+                <li>Open the <code>index.html</code> file to see the results.</li>
+            </ol>
+
+            <h2>License</h2>
+            <p>MIT License</p>
         </section>
     </main>
 
