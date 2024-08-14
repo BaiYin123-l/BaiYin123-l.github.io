@@ -1,68 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>白影的个人博客</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>页面标题</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引入 CSS 文件 -->
 </head>
 <body>
     <header>
-        <h1>白影的个人博客</h1>
-        <nav>
-            <ul>
-                <li><a href="#" onclick="showPage('home')">首页</a></li>
-                <li><a href="#" onclick="showPage('about')">关于我</a></li>
-                <li><a href="#" onclick="showPage('projects')">项目</a></li>
-            </ul>
-        </nav>
+        <h1>欢迎来到我的网站</h1>
     </header>
 
-    <main id="content">
-        <div id="home" class="page active">
-            <h2>欢迎来到我的个人博客</h2>
-            <p>测试</p>
-        </div>
-
-        <div id="about" class="page" style="display: none">
-            <h2>关于我及该项目</h2>
-            <p>测试</p>
-        </div>
-
-        <div id="projects" class="page" style="display: none">
-            <h2>项目产品录</h2>
-            <div id="project-container">
-                <div class="project">
-                    <div class="project-name" onclick="toggleVersions(this)">项目1</div>
-                    <div class="versions" style="display: none;">
-                        <div class="version">v1.0</div>
-                        <div class="version">v1.1</div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-name" onclick="toggleVersions(this)">项目2</div>
-                    <div class="versions" style="display: none;">
-                        <div class="version">v1.0</div>
-                        <div class="version">v1.1</div>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <div class="project-name" onclick="toggleVersions(this)">项目3</div>
-                    <div class="versions" style="display: none;">
-                        <div class="version">v1.0</div>
-                        <div class="version">v1.1</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    <main>
+        <section>
+            <h2>部分标题</h2>
+            <p>这是一个段落，您可以在这里写一些文本。</p>
+        </section>
     </main>
 
     <footer>
-        <p>© 2023 我的个人博客</p>
+        <p>&copy; 2024 baiyin</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -16,12 +16,12 @@
 
 1. 克隆仓库：
     ```bash
-    git clone https://github.com/你的用户名/你的项目名.git
+    git clone https://github.com/BaiYin123-l/BaiYin123-l.github.io.git
     ```
 
 2. 进入项目目录：
     ```bash
-    cd 你的项目名
+    cd BaiYin123-l.github.io
     ```
 
 3. 打开 `index.html` 文件以查看效果。
@@ -49,12 +49,12 @@ This site is created by Baiyin and utilizes technologies such as HTML, CSS, and 
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-project-name.git
+    git clone https://github.com/BaiYin123-l/BaiYin123-l.github.io.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd your-project-name
+    cd BaiYin123-l.github.io
     ```
 
 3. Open the `index.html` file to see the results.
