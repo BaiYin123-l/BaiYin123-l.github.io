@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+img {}
+
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -127,4 +129,26 @@ footer {
 
 h2 {
     margin-top: 20px; /* 为标题增加上边距 */
+}
+
+#home>img{
+    float: left;
+}
+
+#text>.talking{
+    border-color: #007bff;
+    border-width: 1px;
+    border-style: dotted;
+    /*background-color: #285d96;*/
+    border-radius: 2px;
+    margin: 3px;
+}
+
+#text>.talking>h2{
+    text-decoration-line: underline;
+    text-align: center;
+}
+
+#text>.talking>p{
+    text-indent: 2em;
 }
